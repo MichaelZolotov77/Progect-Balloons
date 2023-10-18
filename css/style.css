@@ -19,7 +19,47 @@ body {
 }
 
 .header {
+  position: relative;
   height: 65vh;
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/header-background.jpg) center/cover no-repeat;
-  clip-path: polygon(0 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0 80%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+
+.header__logo {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  height: 70px;
+  width: 56px;
+}
+
+.header__box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+.title-first {
+  color: #FFF;
+}
+
+.title-first__main {
+  display: block;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 60px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.title-first__secondary {
+  display: block;
+  font-size: 40px;
+  font-weight: 100;
+  line-height: 48px;
+  letter-spacing: 5px;
 }
