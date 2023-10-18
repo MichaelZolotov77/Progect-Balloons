@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: #777777;
   font-size: 16px;
@@ -58,6 +58,7 @@ body {
   animation-duration: 2s;
   animation-delay: 1s;
   animation-timing-function: ease;
+  backface-visibility: hidden;
 }
 
 .title-first__secondary {
@@ -70,6 +71,29 @@ body {
   animation-duration: 2s;
   animation-delay: 1s;
   animation-timing-function: ease;
+  backface-visibility: hidden;
+  margin-bottom: 65px;
+}
+
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #777777;
+  padding: 15px 40px;
+  background: white;
+  border-radius: 50px;
+  display: inline-block;
+  transition: all .3s;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes leftToRight {
