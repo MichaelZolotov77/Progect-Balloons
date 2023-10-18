@@ -43,13 +43,43 @@ body
         line-height: 60px
         letter-spacing: 10px  
         text-transform: uppercase 
-        margin-bottom: 10px    
+        margin-bottom: 10px
+        animation-name: leftToRight 
+        animation-duration: 2s 
+        animation-delay: 1s
+        animation-timing-function: ease  
     &__secondary
         display: block
         font-size: 40px
         font-weight: 100
         line-height: 48px
         letter-spacing: 5px
+        animation-name: rightToLeft
+        animation-duration: 2s
+        animation-delay: 1s 
+        animation-timing-function: ease 
+
+@keyframes leftToRight
+    0%
+        opacity: 0
+        transform: translate(-100px)
+    80%
+        transform: translate(10px)
+    
+    100%
+        opacity: 1
+        transform: translate(0px)
+
+@keyframes rightToLeft
+    0%
+        opacity: 0
+        transform: translate(100px)
+    80%
+        transform: translate(-10px)
+    
+    100%
+        opacity: 1
+        transform: translate(0px)
 
    
    
