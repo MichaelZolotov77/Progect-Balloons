@@ -1,3 +1,4 @@
+// Переменные, позволяют быстро редактировать все элементы
 $color-gray: #777777
 $color-brown-light: #BA8554
 $color-brown-dark: #A14F03
@@ -6,22 +7,23 @@ $color-white: #ffffff
 
 $box-shadow: (0rem .4rem .4rem rgba(0,0,0 ,0.3))
 
+// Миксины - возможность сделать шаблоны кода и переиспользовать его.
+// Возможно добавлять аргументы.
 @mixin style-link($color)
     display: inline-block
     text-transform: uppercase
     text-decoration: none
     color: $color
 
-%button-style
-    @include style-link($color-gray)
-    font-size: 2rem       
-    padding: 1.5rem 4rem
-    background: $color-white
-    border-radius: 5rem
-    transition: all .3s
-    position: relative
+// Шаблоны. Позволяют создавать библиотеки готового sass кода, который не компилируется в итоговый css файл, если не испозьзовать этот шаблон   
+%shablons
+    margin: 0
+    padding: 0
+    box-sizing: border-box
 
-
+// Функции, позволяют создавать операции
+@function multiply($a, $b)
+    @return $a * $b
     
 *, ::after, ::before
     margin: 0
@@ -41,6 +43,9 @@ body
 
 .container
     background-color: #F7F7F7
+    //background-color: darken(#F7F7F7,30% )
+    //background-color: lighten(#F7F7F7,30% )
+    //background-color: transparentize(#F7F7F7,0.5 )
 
 .header
     position: relative
@@ -49,7 +54,7 @@ body
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
     &__logo
         position: absolute
-        left: 5rem
+        left: multiply(25,2) * 1px
         top: 5rem
         height: 7rem
         width: 5.6rem
@@ -91,7 +96,13 @@ body
 
 .btn
     &:link, &:visited
-        @extend %button-style
+        @include style-link($color-gray)
+        font-size: 2rem       
+        padding: 1.5rem 4rem
+        background: $color-white
+        border-radius: 5rem
+        transition: all .3s
+        position: relative
     &:hover
         transform: translateY(-0.4rem)
         box-shadow: $box-shadow
