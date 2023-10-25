@@ -4,11 +4,11 @@ $color-brown-dark: #A14F03
 $color-black: #000000
 $color-white: #ffffff
 
-@mixin style-link
+@mixin style-link($color)
     display: inline-block
     text-transform: uppercase
     text-decoration: none
-    color: $color-gray
+    color: $color
 
 $box-shadow: (0rem .4rem .4rem rgba(0,0,0 ,0.3))
 
@@ -81,7 +81,7 @@ body
 
 .btn
     &:link, &:visited
-        @include style-link
+        @include style-link($color-gray)
         font-size: 2rem       
         padding: 1.5rem 4rem
         background: $color-white
