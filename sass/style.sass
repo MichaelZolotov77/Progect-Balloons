@@ -4,13 +4,23 @@ $color-brown-dark: #A14F03
 $color-black: #000000
 $color-white: #ffffff
 
+$box-shadow: (0rem .4rem .4rem rgba(0,0,0 ,0.3))
+
 @mixin style-link($color)
     display: inline-block
     text-transform: uppercase
     text-decoration: none
     color: $color
 
-$box-shadow: (0rem .4rem .4rem rgba(0,0,0 ,0.3))
+%button-style
+    @include style-link($color-gray)
+    font-size: 2rem       
+    padding: 1.5rem 4rem
+    background: $color-white
+    border-radius: 5rem
+    transition: all .3s
+    position: relative
+
 
     
 *, ::after, ::before
@@ -81,13 +91,7 @@ body
 
 .btn
     &:link, &:visited
-        @include style-link($color-gray)
-        font-size: 2rem       
-        padding: 1.5rem 4rem
-        background: $color-white
-        border-radius: 5rem
-        transition: all .3s
-        position: relative
+        @extend %button-style
     &:hover
         transform: translateY(-0.4rem)
         box-shadow: $box-shadow

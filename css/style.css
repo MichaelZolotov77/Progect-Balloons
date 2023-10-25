@@ -1,3 +1,16 @@
+.btn:link, .btn:visited {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #777777;
+  font-size: 2rem;
+  padding: 1.5rem 4rem;
+  background: #ffffff;
+  border-radius: 5rem;
+  transition: all .3s;
+  position: relative;
+}
+
 *, ::after, ::before {
   margin: 0;
   padding: 0;
@@ -77,19 +90,6 @@ body {
   animation-timing-function: ease;
   backface-visibility: hidden;
   margin-bottom: 6.5rem;
-}
-
-.btn:link, .btn:visited {
-  display: inline-block;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #777777;
-  font-size: 2rem;
-  padding: 1.5rem 4rem;
-  background: #ffffff;
-  border-radius: 5rem;
-  transition: all .3s;
-  position: relative;
 }
 
 .btn:hover {
