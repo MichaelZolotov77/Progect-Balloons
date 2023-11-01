@@ -115,6 +115,10 @@ body {
   text-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
 }
 
+.title-secondary_white {
+  color: #ffffff;
+}
+
 .title-third {
   font-size: 2rem;
   letter-spacing: .2rem;
@@ -399,6 +403,35 @@ body {
   font-weight: 500;
 }
 
+.feedBack-card {
+  width: 75%;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  padding: 6rem;
+  transform: skew(330deg);
+}
+
+.feedBack-card > * {
+  transform: skew(-330deg);
+}
+
+.feedBack-card__img {
+  width: 15rem;
+  height: 15rem;
+  background: green;
+  float: left;
+  border-radius: 20rem;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-share-outside: circle(50% at 50% 50%);
+  margin-right: 4rem;
+  overflow: hidden;
+}
+
+.feedBack-card__img img {
+  height: 100%;
+}
+
 .header {
   position: relative;
   height: 65vh;
@@ -487,4 +520,9 @@ body {
 
 .section-tour {
   padding-top: 21rem;
+  margin-bottom: 8rem;
+}
+
+.section-feedBack {
+  padding-top: 8rem;
 }
