@@ -155,7 +155,7 @@ body {
   margin-bottom: 8rem;
 }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
@@ -166,6 +166,7 @@ body {
   border-radius: 5rem;
   transition: all .3s;
   position: relative;
+  border: none;
 }
 
 .btn:hover {
@@ -200,6 +201,15 @@ body {
 .btn_animated {
   animation: btnToUp .5s ease-out .7s;
   animation-fill-mode: backwards;
+}
+
+.btn_brown, .btn_brown:link, .btn_brown:visited {
+  background: #A14F03;
+  color: #ffffff;
+}
+
+.btn_brown::after, .btn_brown:link::after, .btn_brown:visited::after {
+  background: #A14F03;
 }
 
 .btn-text:link, .btn-text:visited {
@@ -497,7 +507,11 @@ body {
 }
 
 .form__group:not(:last-child) {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
+}
+
+.form__group:nth-child(4) {
+  margin-bottom: 4rem;
 }
 
 .form__input {
@@ -509,7 +523,7 @@ body {
   border: none;
   border-bottom: .2rem solid transparent;
   border-radius: .5rem;
-  width: 55%;
+  width: 75%;
 }
 
 .form__input:focus {
@@ -529,13 +543,58 @@ body {
   display: block;
   margin-top: 1rem;
   margin-left: 1.5rem;
-  transition: .7s all;
+  transition: .2s all;
 }
 
 .form__input:placeholder-shown + .form__label {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-2rem);
+}
+
+.form__group-radio {
+  width: 45%;
+  display: inline-block;
+}
+
+.form__input-radio {
+  display: none;
+}
+
+.form__label-radio {
+  cursor: pointer;
+  position: relative;
+  padding-left: 4rem;
+}
+
+.form__button-radio {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 0.5rem solid #A14F03;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -.6rem;
+}
+
+.form__button-radio::after {
+  content: "";
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  background: #A14F03;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: .2s all;
+}
+
+.form__input-radio:checked ~ .form__label-radio .form__button-radio:after {
+  opacity: 1;
 }
 
 .header {
