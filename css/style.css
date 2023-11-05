@@ -1,3 +1,10 @@
+@charset "UTF-8";
+/* В аргумент миксина мы будет передавать несколько вариантов брейкпоинтов, таких как:
+    - phone
+    - tab-port
+    - tab-land
+    - big-screen
+    ('это произвольные слова, не команды')*/
 @keyframes btnToUp {
   0% {
     opacity: 0;
@@ -45,6 +52,30 @@
 
 html {
   font-size: 62.5%;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 30%;
+  }
+}
+
+@media (min-width: 1800px) {
+  html {
+    font-size: 75%;
+  }
 }
 
 body {
@@ -793,12 +824,12 @@ body {
 
 .navigation__icon {
   position: relative;
-  margin-top: 40px;
+  margin-top: 4rem;
 }
 
 .navigation__icon, .navigation__icon::before, .navigation__icon::after {
-  width: 30px;
-  height: 2px;
+  width: 3rem;
+  height: .2rem;
   background: #000000;
   display: inline-block;
 }
@@ -811,19 +842,19 @@ body {
 }
 
 .navigation__icon::before {
-  top: -8px;
+  top: -.8rem;
 }
 
 .navigation__icon::after {
-  top: 8px;
+  top: .8rem;
 }
 
 .navigation__button:hover .navigation__icon::before {
-  top: -10px;
+  top: -1rem;
 }
 
 .navigation__button:hover .navigation__icon::after {
-  top: 10px;
+  top: 1rem;
 }
 
 .navigation__toggle:checked + .navigation__button .navigation__icon {
