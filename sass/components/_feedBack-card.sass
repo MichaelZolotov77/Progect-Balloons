@@ -7,8 +7,14 @@
     transform: skew(330deg)
     @include respond(tab-land)
         width: 80%
+    @include respond(tab-port)
+        transform: skew(350deg)
+        padding: 3rem
     &>*
         transform: skew(-330deg)
+        @include respond(tab-port)
+            transform: skew(-350deg)
+            text-align: center 
     &__img
         width: 15rem
         height: 15rem
@@ -20,6 +26,10 @@
         margin-right: 4rem
         overflow: hidden
         position: relative
+        @include respond(tab-port)
+            float: none
+            margin: 0 auto
+            margin-bottom: 3rem
         img
             height: 100%
             transform: scale(1.2)
